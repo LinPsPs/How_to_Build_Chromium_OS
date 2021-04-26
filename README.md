@@ -56,7 +56,7 @@ $ sudo apt-get install git-core gitk git-gui curl lvm2 thin-provisioning-tools \
 
 #### Set up Environments
 
-2. Add the gerrit credentials, you might have trouble accessing the codes if you don't have gerrit credentials.
+1. Add the gerrit credentials, you might have trouble accessing the codes if you don't have gerrit credentials.
 
    [Gerrit Guide](https://www.chromium.org/developers/gerrit-guide)
 
@@ -104,6 +104,12 @@ $ sudo apt-get install git-core gitk git-gui curl lvm2 thin-provisioning-tools \
    (cr) (branch/(...)) username@pcname ~/trunk/src/scripts $
    ```
 
+   Don't forget to initialize the build for a board
+   
+   ```shell
+   (chroot) ./setup_board --board=${BOARD} # We use BOARD=amd64-generic in this guide
+   ```
+   
    You can set the password for the shared user account ```chronos``` on the Chromium OS
 
    ```shell
